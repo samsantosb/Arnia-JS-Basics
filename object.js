@@ -14,7 +14,25 @@ const arrayOfObj = Object.entries(obj)
 //tansformar um array de arrays em um objeto
 const obj2 = Object.fromEntries(arrayOfObj);
 
-
-console.log(Object.keys(obj))
+const obj3 = Object.keys(obj)
 //volta todas as chaves de um objeto em uma array
+
+const obj4 = Object.values(obj)
+//volta todos os valores de um objeto em uma array
+
+const objeto1 = {
+    name: 'Lee',
+    age: 29,
+} //armazenado em um endereço de memoria X
+
+const objeto2 = {
+    name: 'Lee',
+    age: 29,
+} //armazenado em um endereço de memoria Y
+
+//como comparar 
+JSON.stringify(objeto1) === JSON.stringify(objeto2)
+
+
+
 
