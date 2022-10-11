@@ -56,13 +56,13 @@ arr.sort();
 
 const arrayToIntroduceFor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// a estrutura de iteração mais veloz
+// // a estrutura de iteração mais veloz
 // for (let i = 0; i < arrayToIntroduceFor.length; i++) {
 //     console.log(arrayToIntroduceFor[i]);
 //     console.log('aqui foi feito um log')
 // }
 
-//itera por valor
+// //itera por valor
 // for (const item of arrayToIntroduceFor) {
 //     console.log(item);
 //     console.log('aqui foi feito um log')
@@ -73,3 +73,31 @@ const arrayToIntroduceFor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //     console.log(arrayToIntroduceFor[index]);
 //     console.log('aqui foi feito um log')
 // }
+
+//for, for of, for in, e forEach são estruturas de iteração
+//eles iteram cada item de uma array podendo altera-lo
+
+
+//map - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+//map cria uma nova array com os resultados da função de callback para cada elemento da array
+
+// const arrayToIntroduceMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const copyOfUpperArray = arrayToIntroduceMap.map(item => {
+//     return item * 2;
+// });
+
+// console.log(arrayToIntroduceMap);
+// console.log(copyOfUpperArray);
+
+
+const arrayTointroduceForeach = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let newArray = [];
+
+// for (const item of arrayTointroduceForeach) {
+//     newArray.push(item * 2);
+// }
+
+const newArray = arrayTointroduceForeach.map(item => {
+    return item * 2
+});
+console.log(newArray);

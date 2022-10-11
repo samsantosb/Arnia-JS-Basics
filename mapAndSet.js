@@ -17,7 +17,6 @@
 // map.delete('name');
 // console.log(map)
 
-
 const map = new Map(
     [
         ['name', 'Lee'],
@@ -25,9 +24,18 @@ const map = new Map(
     ]
 );
 
-//for loop
-// for (let [key, value] of map) {
-//     console.log(key, value);
-// }
+for (let [key, value] of map) {
+    console.log(key, value);
+}
+
+//remover duplicados usando o spread do set
+const duplicatedArray = [1, 1, 2, 2, 3, 3]
+
+const removeDuplicates = [...new Set(duplicatedArray)]
+console.log(removeDuplicates)
+
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Set
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
 
