@@ -52,3 +52,24 @@ arr.splice(2, 1);
 //13. arr.sort
 //ele ordena os elementos da array - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 arr.sort();
+
+
+const arrayToIntroduceFor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// a estrutura de iteração mais veloz
+// for (let i = 0; i < arrayToIntroduceFor.length; i++) {
+//     console.log(arrayToIntroduceFor[i]);
+//     console.log('aqui foi feito um log')
+// }
+
+//itera por valor
+// for (const item of arrayToIntroduceFor) {
+//     console.log(item);
+//     console.log('aqui foi feito um log')
+// }
+
+//itera por índice
+// for (const index in arrayToIntroduceFor) {
+//     console.log(arrayToIntroduceFor[index]);
+//     console.log('aqui foi feito um log')
+// }
