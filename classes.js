@@ -9,6 +9,7 @@ function createPerson(name, age) {
 }
 
 const person = createPerson('arnia', 250);
+const otherPerson = person3('sammm', 23213120);
 //instanciamos a função e criamos um objeto
 
 console.log(typeof person);
@@ -45,38 +46,51 @@ console.log(person2);
 //Metodos de classe
 //classe eltra maisculo
 class Calculator {
-    constructor() {
-        //nesse contexto ele é opcional
+    constructor(a, b) {
+        this.a = a; //this.a = 1
+        this.b = b; //this.b = 2
     }
-    sum(a, b) {
-        return a + b;
+
+    sum() {
+        return this.a + this.b;
     }
-    sub(a, b) {
-        return a - b;
+    sub() {
+        return this.a - this.b;
     }
-    mult(a, b) {
-        return a * b;
+    mult() {
+        return this.a * this.b;
     }
-    div(a, b) {
-        return a / b;
+    div() {
+        return this.a / this.b;
     }
 }
 
 //função letra minuscula
-function calculator2() {
+function calculator2(a, b) {
+    const string = 'string';
     return {
-        sum: function (a, b) {
+        a: a,
+        b: b,
+        sum: function () {
             return a + b;
         },
-        sub: function (a, b) {
+        sub: function () {
             return a - b;
         },
-        mult: function (a, b) {
+        mult: function () {
             return a * b;
         },
-        div: function (a, b) {
+        div: function () {
             return a / b;
         }
     }
 }
-const calculator = new Calculator();
+
+//instanciamos a classe
+const calculator = new Calculator(1, 2);
+console.log(calculator.div());
+
+
+//instanciamos a função
+const calculatorr2 = calculator2(2, 3);
+console.log(calculatorr2.mult());
