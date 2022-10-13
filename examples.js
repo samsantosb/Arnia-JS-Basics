@@ -40,3 +40,34 @@ const arniaObject = arr.map(person => {
 console.log(arniaObject);
 
 //manipulações de dados em memória
+
+
+//________________//
+
+const users = Object.freeze([
+    {
+        name: 'Diego',
+        age: 23,
+    },
+    {
+        name: 'Gabriel',
+        age: 15,
+    },
+]);
+
+// const usersWithAdress = users.map((user) => {
+//     return {
+//         ...user,
+//         adress: 'Rua dos bobos, 0',
+//         zipcode: `${Math.floor(Math.random() * 10000)}-${Math.floor(Math.random() * 1000)}`,
+//     }
+// });
+
+users = {
+    name: 'Diego',
+}
+
+//freeze +++
+//const ++
+//let +
+//var -------
