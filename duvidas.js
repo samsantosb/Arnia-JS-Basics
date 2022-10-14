@@ -76,4 +76,31 @@ console.log(newUsers, 'nova array de users')
 
 
 
-
+const person = {
+    name: 'João',
+    age: 20,
+    isMajor: true,
+    pets: [{
+        tipo: 'cachorro',
+        name: 'Bolinha',
+        age: 2,
+        isAlive: true
+    }, {
+        tipo: 'gato',
+        name: 'Quadradinho',
+        age: 3,
+        isAlive: true
+    },
+    {
+        tipo: 'peixe',
+        name: 'Nemo',
+        age: 1,
+        isAlive: true
+    }],
+    sleep: function () {
+        return `${this.name} está dormindo`;
+    },
+    run: function () {
+        return `${this.name} está correndo`;
+    }
+}
