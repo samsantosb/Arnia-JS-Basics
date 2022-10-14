@@ -1,4 +1,4 @@
-//classe como um superset de funções
+//classe pode ter analogias com funções para facilitar seu entendimento
 
 //Factory Function
 function createPerson(name, age) {
