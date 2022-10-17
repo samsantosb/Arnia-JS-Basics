@@ -12,7 +12,7 @@ const person = createPerson('arnia', 250);
 const otherPerson = person3('sammm', 23213120);
 //instanciamos a função e criamos um objeto
 
-console.log(typeof person);
+// console.log(typeof person);
 
 //Class Constructor
 
@@ -38,7 +38,7 @@ function person3(name, age) {
 }
 
 const person2 = new Person('sam', 350);
-console.log(person2);
+// console.log(person2);
 
 //typeof person e typeof person2 são objetos
 //construtor irá instanciar objetos
@@ -88,9 +88,50 @@ function calculator2(a, b) {
 
 //instanciamos a classe
 const calculator = new Calculator(1, 2);
-console.log(calculator.div());
+// console.log(calculator.div());
 
 
 //instanciamos a função
 const calculatorr2 = calculator2(2, 3);
-console.log(calculatorr2.mult());
+// console.log(calculatorr2.mult());
+
+
+//Herança de classe
+class Pikachu {
+    constructor(type) {
+        //this refere-se ao objeto que está sendo criado - ao objeto da classe
+        //sem o this é parâmetro, vem de fora do construtor
+
+        this.name = 'Alberto-O-Pikachu-Front-End';
+        this.type = type;
+    }
+    attack() {
+        return `${this.name} atacou`;
+    }
+}
+
+const pikachu = new Pikachu('elétrico');
+console.log(pikachu);
+console.log(pikachu.attack());
+
+class Raichu extends Pikachu {
+    constructor(type, level) {
+        //super referencia o construtor da classe pai(Pikachu)
+        //os parâmetros de super, são os mesmos parâmetros do construtor da classe Pai(Pikachu)
+        //super deve ser chamado antes de this
+        //parâmetros instanciados na classe pai de maneira literal,
+        //não precisam ser passados como parâmetro para o construtor da classe filha
+        super(type);
+        this.level = level;
+    }
+    attack() {
+        return super.attack
+    }
+}
+
+const raichu = new Raichu('elétrico e fada', 100);
+console.log(raichu);
+
+
+
+//

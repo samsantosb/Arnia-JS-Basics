@@ -14,6 +14,7 @@ function data(age, name, lastName, password, zipCode, cpf) {
     }
 }
 
+
 const myPersonalData = data(25, 'arnia', 'santos', '123456', '12345678');
 //instanciar um objeto
 const cesarPersonalData = data(25, 'cesar', 'santos', '123456', '12345678');
@@ -81,75 +82,3 @@ console.log('____________________________________________________')
 //_______________________________________________________________
 
 
-// //3. criando uma fila com class notation
-class Queue {
-    constructor() {
-        this.queue = [];
-    }
-
-    enqueue(item) {
-        this.queue.push(item);
-    }
-
-    sort() {
-        this.queue.sort();
-    }
-
-    dequeue() {
-        return this.queue.shift();
-    }
-
-    getQueue() {
-        return this.queue;
-    }
-}
-
-const fila = new Queue();
-console.log(fila)
-fila.enqueue(5);
-fila.enqueue(2);
-fila.enqueue(1);
-fila.enqueue(4);
-fila.enqueue(6);
-console.log(fila)
-fila.sort();
-console.log(fila)
-fila.dequeue();
-console.log(fila)
-
-
-console.log('____________________________________________________')
-//_______________________________________________________________
-
-//4. criando uma fila com factory notation
-const queue = [];
-
-function enqueue(queue, item) {
-    queue.push(item);
-}
-
-function sort(queue) {
-    queue.sort();
-}
-
-function dequeue(queue) {
-    return queue.shift();
-}
-
-function getQueue(queue) {
-    return queue;
-}
-
-// enqueue(queue, 5);
-// enqueue(queue, 2);
-// enqueue(queue, 1);
-// enqueue(queue, 4);
-// enqueue(queue, 6);
-// console.log(queue)
-// sort(queue);
-// console.log(queue)
-// dequeue(queue);
-// console.log(queue)
-
-// console.log('____________________________________________________')
-// //_______________________________________________________________
