@@ -111,8 +111,8 @@ class Pikachu {
 }
 
 const pikachu = new Pikachu('elétrico');
-console.log(pikachu);
-console.log(pikachu.attack());
+// console.log(pikachu);
+// console.log(pikachu.attack());
 
 class Raichu extends Pikachu {
     constructor(type, level) {
@@ -130,8 +130,62 @@ class Raichu extends Pikachu {
 }
 
 const raichu = new Raichu('elétrico e fada', 100);
-console.log(raichu);
+// console.log(raichu);
 
 
 
-//
+//Injeção de dependência
+
+//com funções
+function sum(a, b) {
+    return a + b;
+}
+
+sum(2, 3)
+function sub(a, b) {
+    return a - b;
+}
+
+// function calculator1000(sum, sub, a, b) {
+//     return {
+//         //a função sum é passada como parâmetro para a função calculator1000	
+//         aquiSoma: sum(a, b),
+//         //a função sub é passada como parâmetro para a função calculator1000
+//         aquiSubtrai: sub(a, b)
+//     }
+// }
+
+//const calculator1000 = calculator1000(sum, sub, 1, 2);
+
+
+
+//mais um caso
+function operations() {
+    return {
+        sum: function (a, b) {
+            return a + b;
+        },
+        sub: function (a, b) {
+            return a - b;
+        }
+    }
+}
+
+const op = operations();
+op.sub(2, 3);
+op.sum(2, 3);
+// console.log(op.sum(1, 2));
+// console.log(op.sub(1, 2));
+function operationsAndMyNmae(op, a, b) {
+    return {
+        sum: op.sum(a, b),
+        sub: op.sub(a, b),
+        myName: 'Samuel',
+        sumMinusSub: function () {
+            return op.sum(a, b) - op.sub(a, b);
+        }
+    }
+}
+
+operationsAndMyNmae(op, 1, 2);
+
